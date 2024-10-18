@@ -1,0 +1,95 @@
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    background-color: #f4f4f9; /* Soft background color */
+  }
+  
+  .btn {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    border: none;
+    background-color: #ff6666; /* Button background color */
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff3333; /* Button hover effect */
+  }
+  
+  .calculator {
+    width: 16rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 3.5rem;
+    gap: 0.5rem;
+    border: 1px solid #7e0000;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #ffffff; /* Calculator background */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  .calculator div {
+    display: grid;
+    place-items: center;
+    font: 0.85rem Helvetica, sans-serif;
+    color: #004333; /* Text color for buttons */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    user-select: none;
+    background-color: #f9f9f9; /* Button background */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .calculator div:hover {
+    background-color: #007dfa; /* Button hover background */
+    color: #fff; /* Button hover text color */
+  }
+  
+  .calculator div:nth-of-type(1) {
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: #494646; /* Special button text color */
+  }
+  
+  .calculator div:nth-of-type(18) {
+    grid-column: span 2;
+  }
+  
+  .calculator .display {
+    grid-column: span 4;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    letter-spacing: 0.2rem;
+    overflow: hidden;
+    cursor: default;
+    background-color: #e0e0e0; /* Display background */
+    color: #333333; /* Display text color */
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .mode {
+    background-color: rgb(33, 31, 34);
+    filter: invert(100%) hue-rotate(180deg);
+  }
+  
